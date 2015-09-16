@@ -22,15 +22,16 @@ describe('addsToHashObject', function(){
   });
 });
 
-// describe('sortsByValue', function(){
-//   it("will sort by value", function(){
-//     expect(sortsByValue({'your':1, 'normally':3})[0]).to.equal(["normally"][3]);
-//   });
-// });
-
 describe('sortsByValue', function(){
   it("will sort by value", function(){
     var hashObject = {'your':1, 'normally':3};
     expect(sortsByValue(hashObject)).to.eql([["normally", 3], ['your', 1]]);
+  });
+});
+
+describe('countWords', function(){
+  it("Will return an array of words and their counts", function(){
+    expect(countWords("Normally, both your butts would be dead as fried chicken , butts, butts, both")[0]).to.eql(['butts', 3]);
+    expect(countWords("Normally, both your butts would be dead as fried chicken , butts, butts, both")[1]).to.eql(['both', 2]);
   });
 });

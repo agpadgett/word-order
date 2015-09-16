@@ -29,3 +29,11 @@ var sortsByValue = function(hashObject){
   }
   return sorted;
 }
+
+var countWords = function(userText) {
+  var standardizedText = standardizeText(userText);
+  var wordArray = splitStringIntoWordArray(standardizedText);
+  var hashMap = addsToHashObject(wordArray);
+  var sortedWordArray = sortsByValue(hashMap);
+  return sortedWordArray;
+}
