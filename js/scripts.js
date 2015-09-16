@@ -20,3 +20,12 @@ var addsToHashObject = function(wordArray){
   }
   return hashMap;
 }
+
+var sortsByValue = function(hashObject){
+  var sorted = [];
+  for (var word in hashObject) {
+      sorted.push([word, hashObject[word]]);
+      sorted.sort(function(a, b) {return b[1] - a[1]});
+  }
+  return sorted;
+}
